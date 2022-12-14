@@ -10,6 +10,10 @@
   link: /program/
   new_window: false
   highlight: false
+- name: Visual/Level/Sound Design
+  link: /visual/
+  new_window: false
+  highlight: false
 - name: Results
   link: /results/
   new_window: false

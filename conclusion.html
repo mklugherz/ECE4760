@@ -7,18 +7,15 @@ heading: Conclusion
 	<!-- CONCLUSION -->
 	<h1>Conclusion</h1>
 	<p style="color:black;font-size: 18px">We found the implementation of game logic to be much more difficult than
-		anticipated. For
-		example, we had planned to implement the game in a fully tile-based manner, but quickly realized that in order
-		for the characters’ movement on the VGA display to appear smooth enough they could not jump from one tile to the
-		next, thus we also needed some extent of control between tiles. We also did not anticipate how many corner cases
-		we would have to deal with throughout the game logic. Instead, we had predicted running into issues with running
-		out of space on the Pico either as far as storing designs and sound effects or for running the game code.
-		Neither of these issues ended up being a problem. While we did not end up scaling the project back in any
+		anticipated. We had predicted running into issues with running
+		out of space on the Pico either as far as storing designs and sound effects or for running the game code. Designing
+		with these constraints in mind made memory-intensive processes trick. However, with the right modular
+		implementations, there was significantly more flash memory left over than we anticipated. Game logic was difficult
+		to implement since there are many aspects that we hadn't actually considered before deciding on the game (wall
+		detection, hitbox/hurtbox detection, etc).
+		While we did not end up scaling the project back in any
 		significant way from our expected result, there are a couple minor bugs as a result of corner cases which we did
-		not discover with enough time to fully resolve. A result of things being more difficult than expected is that we
-		did not spend as much time iterating on level design as we had anticipated, thus we did not stray from the
-		original game as much as we potentially would have if we had found ourselves with extra time near the end of the
-		project.
+		not discover with enough time to fully resolve.
 	</p>
 
 	<p style="color:black;font-size: 18px">As a result of developing the game program from very strong fundamentals and
@@ -40,13 +37,15 @@ heading: Conclusion
 		in-game, or we could add new music parts to better match the sound generation of a true video game console.
 	</p>
 
-	<p style="color:black;font-size: 18px">As far as intellectual property, we set out to design a Zelda-like game so
-		there would obviously exist some conflict if we were to attempt to profit off this game, for example. All designs used in
+	<p style="color:black;font-size: 18px">As far as intellectual property, the inspiration and much of the design
+		decisions were informed by the original game. However, none of the source code was referenced or looked at, and
+		there are no attempts to profit off our game. All designs
+		used in
 		the game were ultimately designed by us, but many are heavily inspired by either the original Zelda game or
-		other video games like Pokemon and Minecraft. Since the intention of this project was to create a game that
-		would be fun for us and others in the class, etc to play and challenge ourselves to implement many of the
-		features of a well-known game rather than to take credit for the creation of any aspect of the game idea itself
-		we do not believe there is any harm being done. Furthermore, our 9-level demo level, while potentially
-		impressive for a 4-week project completed by undergraduates, does not come close to the original game in quality
+		other video games like Pokemon and Minecraft. The intention of this project was to create a game that
+		would be fun to play and challenge ourselves to implement many of the
+		features of a well-known game. We are not taking credit for the idea of the game or any of the
+		concepts/features of the original or any adjust games. Furthermore, our 9-level demo level, while potentially
+		impressive for a 4-week project completed by undergraduates, does not come close to the original game in complexity
 		or scope.
 	</p>

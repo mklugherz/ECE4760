@@ -17,21 +17,31 @@ heading: High Level Design
     built.
   </p>
 
-  <h2 style="text-align:center">Background Information for Direct Digital Synthesis</h2>
+  <h2>Background Information for Direct Digital Synthesis</h2>
 
   <p>For part of our project, we wanted a continuous looping background music track, so we used Direct Digital Synthesis
-    (DDS) to synthesize this audio. DDS is based on the comparison between a phasor of a complete circle and the overflow
+    (DDS) to synthesize this audio. DDS is based on the comparison between a phasor of a complete circle and the
+    overflow
     of an unsigned “accumulator” variable: as a phasor overflows from 2π to 0, a 32-bit variable overflows from 2^32 - 1
     to 0 in the same way. As such, we can reference elements of a lookup table in the same way we would reference the
-    phase of a single period of a particular sound wave. Therefore, if we want to produce a sound at a certain frequency F_out,
-    and we have configured an interrupt to update our accumulator at a frequency F_s, the amount at which we increment this
+    phase of a single period of a particular sound wave. Therefore, if we want to produce a sound at a certain frequency
+    F_out,
+    and we have configured an interrupt to update our accumulator at a frequency F_s, the amount at which we increment
+    this
     accumulator is directly proportional to F_out and inversely proportional to F_s:
   </p>
 
-  <img src="{{ site.baseurl }}/images/DDS_equation.png" alt="DDS Equation" style="height: 70px" style="width: auto" class="screenshot editable" />
+  <img src="{{ site.baseurl }}/images/DDS_equation.png" alt="DDS Equation" style="height: 70px" style="width: auto"
+    class="screenshot editable" />
 
-  <p>We have selected a lookup table of 256 elements, so only the 8 most-significant bits of our 32-bit accumulator variable
+  <p>We have selected a lookup table of 256 elements, so only the 8 most-significant bits of our 32-bit accumulator
+    variable
     matter. Every time we reference the lookup table, we simply right-shift our accumulator by 24 bits.
   </p>
-</diV>
+
+  <p>Since we are not transmitting anything wirelessly, we do not need to account for or apply any
+    IEEE or likewise standards.
+
+  </p>
+</div>
 </div>
