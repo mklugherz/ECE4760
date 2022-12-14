@@ -1,3 +1,7 @@
+# README
+
+This repo contains all github-pages-required files for our (Tangia Sun, Emily Speckhals and myself) ECE4760 final project website.
+
 # Hydra
 
 Marketing site template for Jekyll. Browse through a [live demo](https://proud-alligator.cloudvent.net/).
